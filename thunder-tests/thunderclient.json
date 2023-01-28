@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-01-28T03:28:48.886Z",
-    "modified": "2023-01-28T13:51:39.852Z",
+    "modified": "2023-01-28T22:09:28.302Z",
     "headers": [
       {
         "name": "Origin",
@@ -17,6 +17,11 @@
       }
     ],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"EdixonPinea3\",\n  \"name\": \"Edixon\",\n  \"surname\": \"Piña\",\n  \"role\": \"user\"\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -71,16 +76,16 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "update post by id",
-    "url": "{{API_URL}}/api/posts/63d557f1c3d6e8d904ec8ef4",
+    "url": "{{API_URL}}/api/posts/63d59e5c7f1482a6c2852457",
     "method": "PATCH",
     "sortNum": 30000,
     "created": "2023-01-28T17:50:43.807Z",
-    "modified": "2023-01-28T18:01:45.648Z",
+    "modified": "2023-01-28T22:46:55.375Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"location\": \"venezuela\"\n}",
+      "raw": "{\n  \"message\": \"aaaaaa\"\n}",
       "form": []
     },
     "tests": []
@@ -97,6 +102,73 @@
     "modified": "2023-01-28T18:01:30.835Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e94c3109-d069-481a-99e0-2422bdbd87de",
+    "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
+    "containerId": "",
+    "name": "get users",
+    "url": "{{API_URL}}/api/users",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-01-28T19:58:19.672Z",
+    "modified": "2023-01-28T19:58:37.645Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "13abacd0-11d1-45a3-a68f-07761b9b1a8a",
+    "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
+    "containerId": "",
+    "name": "delete user by id",
+    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-01-28T22:08:42.819Z",
+    "modified": "2023-01-28T22:51:32.106Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a9c60a76-5240-443c-a6db-9a14297485f6",
+    "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
+    "containerId": "",
+    "name": "get user by id",
+    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "method": "GET",
+    "sortNum": 25000,
+    "created": "2023-01-28T22:10:34.585Z",
+    "modified": "2023-01-28T22:10:46.018Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e8e4fcfb-4243-4c60-8966-68afc797c5f1",
+    "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
+    "containerId": "",
+    "name": "update user by id",
+    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "method": "PATCH",
+    "sortNum": 27500,
+    "created": "2023-01-28T22:11:43.162Z",
+    "modified": "2023-01-28T22:50:35.650Z",
+    "headers": [
+      {
+        "name": "Origin",
+        "value": "http://localhost:8001",
+        "isDisabled": true
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Alberto\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
