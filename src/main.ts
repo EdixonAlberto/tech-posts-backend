@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
-import { Logger } from '@nestjs/common'
+import { Logger, ValidationPipe } from '@nestjs/common'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 
 import { AppModule } from './app.module'
@@ -34,6 +34,17 @@ async function bootstrap() {
     },
     methods: 'OPTIONS,GET,POST,PATCH,DELETE'
   })
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transformOptions: {
+        enableImplicitConversion: true
+      }
+    })
+  )
 
   await app.listen(portHTTP, async () => {
     loggerApi.log(`Server listening in port "${portHTTP}"`)
