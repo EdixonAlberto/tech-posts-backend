@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "a548e595-ba0a-47fa-ac2b-2135c425edf6",
+    "name": "DEV",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-01-28T03:29:56.762Z",
+    "modified": "2023-01-28T03:30:17.657Z",
+    "data": [
+      {
+        "name": "API_URL",
+        "value": "http://localhost:3000"
+      }
+    ]
+  },
+  {
+    "_id": "5c134fc9-134a-4195-a2d4-bd96a4737475",
+    "name": "PROD",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2023-01-28T03:30:30.563Z",
+    "modified": "2023-01-28T03:30:46.964Z",
+    "data": [
+      {
+        "name": "API_URL",
+        "value": ""
+      }
+    ]
+  }
+]
