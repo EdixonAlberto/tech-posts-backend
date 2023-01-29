@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req, UnauthorizedException } from '@nestjs/common'
+import { Controller, Get, Post, Body, Patch, Param, Delete, Req } from '@nestjs/common'
 
 import { Auth } from '@COMMON/decorators/auth.decorator'
 import { Role } from './entities/user.entity'
@@ -11,9 +11,14 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
-  @Auth(Role.Admin, Role.User)
   async create(@Body() user: CreateUserDto) {
     return this.usersService.create(user)
+  }
+
+  @Post('/admin')
+  @Auth(Role.Admin)
+  async createAdmin(@Body() user: CreateUserDto) {
+    return this.usersService.createAdmin(user)
   }
 
   @Get()
@@ -25,13 +30,13 @@ export class UsersController {
   @Get(':id')
   @Auth(Role.Admin, Role.User)
   async findOne(@Req() { user }: IRequest, @Param() { id }: ObjectIdDto) {
-    return this.usersService.findOne(id)
+    return this.usersService.findOne(id, user)
   }
 
   @Patch(':id')
   @Auth(Role.Admin, Role.User)
   async update(@Req() { user }: IRequest, @Param() { id }: ObjectIdDto, @Body() userData: UpdateUserDto) {
-    return this.usersService.update(id, userData)
+    return this.usersService.update(id, userData, user)
   }
 
   @Delete(':id')

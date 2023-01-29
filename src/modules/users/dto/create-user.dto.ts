@@ -28,6 +28,7 @@ export class CreateUserDto {
   readonly surname: string
 
   @ApiProperty()
+  @IsOptional()
   @IsEnum(Role)
-  readonly role: Role
+  readonly role?: Role
 }

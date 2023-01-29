@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { Matches, IsString, IsOptional } from 'class-validator'
+import { IsString, IsOptional, IsNotEmpty } from 'class-validator'
 
 export class CreatePostDto {
   @ApiProperty({ required: false })
@@ -11,12 +11,8 @@ export class CreatePostDto {
   @IsString()
   readonly message: string
 
-  // TODO: Determinar el id del usuario por medio de la sesion
-  @ApiProperty()
-  @Matches(/^[a-z0-9]{24}$/)
-  readonly author: string
-
   @ApiProperty()
   @IsString()
+  @IsNotEmpty()
   readonly location: string
 }

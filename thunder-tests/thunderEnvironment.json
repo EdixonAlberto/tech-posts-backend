@@ -5,11 +5,15 @@
     "default": true,
     "sortNum": 10000,
     "created": "2023-01-28T03:29:56.762Z",
-    "modified": "2023-01-28T03:30:17.657Z",
+    "modified": "2023-01-29T16:13:40.152Z",
     "data": [
       {
         "name": "API_URL",
         "value": "http://localhost:3000"
+      },
+      {
+        "name": "TOKEN",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDY4OTlkMjU0ZDUxZWNiN2VjMzYzMiIsInVzZXJuYW1lIjoiRWRpeG9uRGV2Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NzUwMDg4MjAsImV4cCI6MTY3NTAxMjQyMH0.Ko6AON9OzWP3Lb5cC4OuwjhDACqg8UIquSbKHOCaFGs"
       }
     ]
   },
@@ -17,7 +21,7 @@
     "_id": "5c134fc9-134a-4195-a2d4-bd96a4737475",
     "name": "PROD",
     "default": false,
-    "sortNum": 20000,
+    "sortNum": 15000,
     "created": "2023-01-28T03:30:30.563Z",
     "modified": "2023-01-28T03:30:46.964Z",
     "data": [

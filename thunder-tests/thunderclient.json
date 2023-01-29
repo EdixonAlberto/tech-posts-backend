@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-01-28T03:28:48.886Z",
-    "modified": "2023-01-29T04:07:07.326Z",
+    "modified": "2023-01-29T14:58:37.579Z",
     "headers": [
       {
         "name": "Origin",
@@ -19,7 +19,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"admin\",\n  \"name\": \"maria\",\n  \"surname\": \"tejeda\",\n  \"role\": \"admin\"\n}",
+      "raw": "{\n  \"username\": \"EdixonDev\",\n  \"name\": \"Edixon\",\n  \"surname\": \"Piña\"\n}",
       "form": []
     },
     "tests": []
@@ -33,9 +33,13 @@
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-01-28T03:29:24.593Z",
-    "modified": "2023-01-28T17:20:08.421Z",
+    "modified": "2023-01-29T15:09:22.391Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -47,13 +51,17 @@
     "method": "POST",
     "sortNum": 5000,
     "created": "2023-01-28T16:54:36.797Z",
-    "modified": "2023-01-28T23:19:01.175Z",
+    "modified": "2023-01-29T15:36:46.096Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"message\": \"uwu\",\n  \"author\": \"63d5ad326cedea20f2bca709\",\n  \"location\": \"col\",\n  \"status\": \"drafted\"\n}",
+      "raw": "{\n  \"message\": \"yamete\",\n  \"location\": \"arg\"\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   },
@@ -62,13 +70,17 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "get post by id",
-    "url": "{{API_URL}}/api/posts/63d5ad506cedea20f2bca70d",
+    "url": "{{API_URL}}/api/posts/63d68ef4036816c6a0814934",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-01-28T17:28:23.697Z",
-    "modified": "2023-01-28T23:20:01.326Z",
+    "modified": "2023-01-29T16:03:05.396Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -76,17 +88,21 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "update post by id",
-    "url": "{{API_URL}}/api/posts/63d5ad506cedea20f2bca70d",
+    "url": "{{API_URL}}/api/posts/63d6928d629b36db4b8e6d8a",
     "method": "PATCH",
     "sortNum": 30000,
     "created": "2023-01-28T17:50:43.807Z",
-    "modified": "2023-01-29T00:46:27.191Z",
+    "modified": "2023-01-29T16:08:31.759Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"likes\": [\"63d5ad326cedea20f2bca709\"]\n}",
+      "raw": "{\n  \"status\": \"published\"\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   },
@@ -95,13 +111,17 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "delete post by id",
-    "url": "{{API_URL}}/api/posts/63d59e5c7f1482a6c2852457",
+    "url": "{{API_URL}}/api/posts/63d68ef4036816c6a0814934",
     "method": "DELETE",
     "sortNum": 40000,
     "created": "2023-01-28T18:01:05.819Z",
-    "modified": "2023-01-28T23:19:42.748Z",
+    "modified": "2023-01-29T16:06:48.066Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -113,9 +133,13 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-01-28T19:58:19.672Z",
-    "modified": "2023-01-29T04:37:09.223Z",
+    "modified": "2023-01-29T14:29:55.301Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -123,13 +147,17 @@
     "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
     "containerId": "",
     "name": "delete user by id",
-    "url": "{{API_URL}}/api/users/63d5ad326cedea20f2bca709",
+    "url": "{{API_URL}}/api/users/63d689c6254d51ecb7ec3637",
     "method": "DELETE",
     "sortNum": 30000,
     "created": "2023-01-28T22:08:42.819Z",
-    "modified": "2023-01-29T02:54:09.938Z",
+    "modified": "2023-01-29T16:09:09.226Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -137,16 +165,16 @@
     "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
     "containerId": "",
     "name": "get user by id",
-    "url": "{{API_URL}}/api/users/63d5f0eb3080db0ee498834c",
+    "url": "{{API_URL}}/api/users/63d6894a254d51ecb7ec362d",
     "method": "GET",
     "sortNum": 25000,
     "created": "2023-01-28T22:10:34.585Z",
-    "modified": "2023-01-29T04:34:42.606Z",
+    "modified": "2023-01-29T16:13:01.623Z",
     "headers": [],
     "params": [],
     "auth": {
       "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDVhZDIwNmNlZGVhMjBmMmJjYTcwNSIsInVzZXJuYW1lIjoiRWRpeG9uUGluZWEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY3NDk2NTkyOCwiZXhwIjoxNjc0OTY5NTI4fQ.jTMUzWT46nFdtYKmZ5ApbiOui60HxVX1Br02DHgcVfY"
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   },
@@ -155,11 +183,11 @@
     "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
     "containerId": "",
     "name": "update user by id",
-    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "url": "{{API_URL}}/api/users/63d6894a254d51ecb7ec362d",
     "method": "PATCH",
     "sortNum": 27500,
     "created": "2023-01-28T22:11:43.162Z",
-    "modified": "2023-01-28T22:50:35.650Z",
+    "modified": "2023-01-29T16:11:57.271Z",
     "headers": [
       {
         "name": "Origin",
@@ -170,8 +198,12 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Alberto\"\n}",
+      "raw": "{\n  \"name\": \"Edixon\",\n  \"surname\": \"Piña\"\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   },
@@ -184,13 +216,49 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-01-29T02:19:31.183Z",
-    "modified": "2023-01-29T04:18:48.173Z",
+    "modified": "2023-01-29T16:13:40.157Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"EdixonPinea\"\n}",
+      "raw": "{\n  \"username\": \"EdixonDev\"\n}",
       "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.accessToken",
+        "action": "setto",
+        "value": "{{TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "9053a3ba-a19e-47ca-81ea-faef58ff8f9d",
+    "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
+    "containerId": "",
+    "name": "create user admin",
+    "url": "{{API_URL}}/api/users/admin",
+    "method": "POST",
+    "sortNum": 15000,
+    "created": "2023-01-29T14:30:49.988Z",
+    "modified": "2023-01-29T14:59:18.899Z",
+    "headers": [
+      {
+        "name": "Origin",
+        "value": "http://localhost:8001",
+        "isDisabled": true
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"admin2\",\n  \"name\": \"user2\",\n  \"surname\": \"surname2\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   }

@@ -12,25 +12,25 @@ export class PostsController {
 
   @Post()
   @Auth(Role.Admin, Role.User)
-  async create(@Body() post: CreatePostDto) {
-    return this.postsService.create(post)
+  async create(@Req() { user }: IRequest, @Body() post: CreatePostDto) {
+    return this.postsService.create(post, user)
   }
 
   @Get()
   @Auth(Role.Admin, Role.User)
   async findAll(@Req() { user }: IRequest) {
-    return this.postsService.findAll()
+    return this.postsService.findAll(user)
   }
 
   @Get(':id')
   @Auth(Role.Admin, Role.User)
   async findOne(@Req() { user }: IRequest, @Param() { id }: ObjectIdDto) {
-    return this.postsService.findOne(id)
+    return this.postsService.findOne(id, user)
   }
 
   @Patch(':id')
-  @Auth(Role.Admin, Role.User) // TODO: El usuario deberia actualizar sus posts ?
-  async update(@Req() { user }: IRequest, @Param() { id }: ObjectIdDto, @Body() postData: UpdatePostDto) {
+  @Auth(Role.Admin) // TODO: El usuario deberia actualizar sus posts ?
+  async update(@Param() { id }: ObjectIdDto, @Body() postData: UpdatePostDto) {
     return this.postsService.update(id, postData)
   }
 
