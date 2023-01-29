@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-01-28T03:28:48.886Z",
-    "modified": "2023-01-28T22:09:28.302Z",
+    "modified": "2023-01-28T23:18:10.301Z",
     "headers": [
       {
         "name": "Origin",
@@ -19,7 +19,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"EdixonPinea3\",\n  \"name\": \"Edixon\",\n  \"surname\": \"Piña\",\n  \"role\": \"user\"\n}",
+      "raw": "{\n  \"username\": \"jaimedev\",\n  \"name\": \"Jaime\",\n  \"surname\": \"zambrano\",\n  \"role\": \"user\"\n}",
       "form": []
     },
     "tests": []
@@ -47,12 +47,12 @@
     "method": "POST",
     "sortNum": 5000,
     "created": "2023-01-28T16:54:36.797Z",
-    "modified": "2023-01-28T17:14:25.207Z",
+    "modified": "2023-01-28T23:19:01.175Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"message\": \"test message\",\n  \"author\": \"507f1f77bcf86cd799439011\",\n  \"location\": \"0\",\n  \"status\": \"drafted\"\n}",
+      "raw": "{\n  \"message\": \"uwu\",\n  \"author\": \"63d5ad326cedea20f2bca709\",\n  \"location\": \"col\",\n  \"status\": \"drafted\"\n}",
       "form": []
     },
     "tests": []
@@ -62,11 +62,11 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "get post by id",
-    "url": "{{API_URL}}/api/posts/63d557f1c3d6e8d904ec8ef4",
+    "url": "{{API_URL}}/api/posts/63d5ad506cedea20f2bca70d",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-01-28T17:28:23.697Z",
-    "modified": "2023-01-28T18:01:39.750Z",
+    "modified": "2023-01-28T23:20:01.326Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -76,16 +76,16 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "update post by id",
-    "url": "{{API_URL}}/api/posts/63d59e5c7f1482a6c2852457",
+    "url": "{{API_URL}}/api/posts/63d5ad506cedea20f2bca70d",
     "method": "PATCH",
     "sortNum": 30000,
     "created": "2023-01-28T17:50:43.807Z",
-    "modified": "2023-01-28T22:46:55.375Z",
+    "modified": "2023-01-29T00:46:27.191Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"message\": \"aaaaaa\"\n}",
+      "raw": "{\n  \"likes\": [\"63d5ad326cedea20f2bca709\"]\n}",
       "form": []
     },
     "tests": []
@@ -95,11 +95,11 @@
     "colId": "7c2deb27-1495-4434-9751-10b0007cfe42",
     "containerId": "",
     "name": "delete post by id",
-    "url": "{{API_URL}}/api/posts/63d557f1c3d6e8d904ec8ef4",
+    "url": "{{API_URL}}/api/posts/63d59e5c7f1482a6c2852457",
     "method": "DELETE",
     "sortNum": 40000,
     "created": "2023-01-28T18:01:05.819Z",
-    "modified": "2023-01-28T18:01:30.835Z",
+    "modified": "2023-01-28T23:19:42.748Z",
     "headers": [],
     "params": [],
     "tests": []

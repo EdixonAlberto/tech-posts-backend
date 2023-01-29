@@ -31,7 +31,7 @@ export class PostModel {
   message: string
 
   @prop({ default: [], ref: 'User' })
-  likes?: Array<UserModel>
+  likes: Array<ObjectId & UserModel>
 
   @prop({ required: true, ref: 'User' })
   author: ObjectId & UserModel

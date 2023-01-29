@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common'
 import { InjectModel } from 'nestjs-typegoose'
 import { ReturnModelType } from '@typegoose/typegoose'
 
-import { PostModel } from '@MODULES/posts/entities/post.entity'
+import { PostModel, Status } from '@MODULES/posts/entities/post.entity'
 import { CreatePostDto, UpdatePostDto } from '@MODULES/posts/dto'
 
 @Injectable()
@@ -10,20 +10,25 @@ export class PostsService {
   constructor(@InjectModel(PostModel) private readonly postModel: ReturnModelType<typeof PostModel>) {}
 
   public async create(post: CreatePostDto) {
-    const createPost = await this.postModel.create(post)
+    const createPost = await this.postModel.create({
+      ...post,
+      status: Status.Drafted
+    })
     await createPost.save()
     return createPost
   }
 
   public async findAll() {
-    const posts = await this.postModel.find()
-    return posts
+    const posts = this.postModel.find()
+    const postsPopulate = await posts.populate('author').populate('likes')
+    return postsPopulate
   }
 
   public async findOne(id: string) {
-    const post = await this.postModel.findById(id)
+    const post = await this.postModel.findOne({ _id: id })
     if (!post) throw new NotFoundException('Post not found')
-    return post
+    const postPopulate = await post.populate('likes')
+    return postPopulate
   }
 
   public async update(id: string, postData: UpdatePostDto) {
