@@ -27,7 +27,7 @@ export class CreateUserDto {
   @MaxLength(20)
   readonly surname: string
 
-  @ApiProperty()
+  @ApiProperty({ required: false, enum: Role })
   @IsOptional()
   @IsEnum(Role)
   readonly role?: Role

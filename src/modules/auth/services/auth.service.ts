@@ -4,6 +4,7 @@ import { ReturnModelType } from '@typegoose/typegoose'
 import { JwtService } from '@nestjs/jwt'
 
 import { UserModel } from '@MODULES/users/entities/user.entity'
+import { AuthData } from '@MODULES/auth/entities/auth.entity'
 
 @Injectable()
 export class AuthService {
@@ -18,7 +19,7 @@ export class AuthService {
     return user
   }
 
-  public async generateAccessToken(user: UserModel) {
+  public generateAccessToken(user: UserModel): AuthData {
     const payload: IUserData = {
       id: user._id,
       username: user.username,

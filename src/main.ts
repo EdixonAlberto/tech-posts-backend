@@ -2,6 +2,8 @@ import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
 import { Logger, ValidationPipe } from '@nestjs/common'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
+import { resolve } from 'path'
+import { writeFileSync } from 'fs'
 
 import { AppModule } from './app.module'
 
@@ -20,10 +22,16 @@ async function bootstrap() {
     .build()
   const document = SwaggerModule.createDocument(app, options)
 
+  // Run dynamic page to show documentation of "OpenAPI"
   SwaggerModule.setup(PATH_DOCS, app, document, {
     customSiteTitle: 'Docs - Tech Posts Backend'
   })
 
+  // Export documentation of "OpenAPI" in file json in /docs
+  const outputPath = resolve(process.cwd(), resolve('docs', 'swagger.json'))
+  writeFileSync(outputPath, JSON.stringify(document), { encoding: 'utf8' })
+
+  // Enable cors
   app.enableCors({
     origin(origin, callback) {
       if (!origin || whiteList.includes(origin)) {
@@ -35,6 +43,7 @@ async function bootstrap() {
     methods: 'OPTIONS,GET,POST,PATCH,DELETE'
   })
 
+  // Set pipe global to validations of fields
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

@@ -1,7 +1,7 @@
 {
   "name": "tech-posts-backend",
   "version": "0.0.1",
-  "description": "",
+  "description": "Api RESTful for post management",
   "author": {
     "name": "Edixon Piña",
     "email": "edixonalbertto@gmail.com"

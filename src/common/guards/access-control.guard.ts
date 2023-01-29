@@ -32,7 +32,8 @@ export class AccessControlGuard implements CanActivate {
   }
 
   private validateAccessToken(authHeader?: string): IUserData | null {
-    const token = authHeader.split('Bearer ')[1]
+    const token: string = authHeader.split('Bearer ')[1]
+    // eslint-disable-next-line
     const { iat, exp, ...userData } = this.jwtService.decode(token) as (IUserData & { iat: number; exp: number }) | null
     return userData
   }

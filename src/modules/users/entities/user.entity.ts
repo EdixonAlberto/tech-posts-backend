@@ -1,4 +1,5 @@
 import { modelOptions, prop } from '@typegoose/typegoose'
+import { ApiProperty } from '@nestjs/swagger'
 
 export enum Role {
   Admin = 'admin',
@@ -16,22 +17,32 @@ export enum Role {
   }
 })
 export class UserModel {
+  @ApiProperty()
   _id: string
-  createAt: Date
-  updateAt: Date
 
+  @ApiProperty()
   @prop({ default: '' })
   avatar?: string
 
+  @ApiProperty()
   @prop({ required: true, unique: true })
   username: string
 
+  @ApiProperty()
   @prop({ required: true })
   name: string
 
+  @ApiProperty()
   @prop({ required: true })
   surname: string
 
+  @ApiProperty({ enum: Role })
   @prop({ required: true })
   role: Role
+
+  @ApiProperty()
+  createAt: Date
+
+  @ApiProperty()
+  updateAt: Date
 }
