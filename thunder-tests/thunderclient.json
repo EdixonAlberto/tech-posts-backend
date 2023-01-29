@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-01-28T03:28:48.886Z",
-    "modified": "2023-01-28T23:18:10.301Z",
+    "modified": "2023-01-29T04:07:07.326Z",
     "headers": [
       {
         "name": "Origin",
@@ -19,7 +19,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"jaimedev\",\n  \"name\": \"Jaime\",\n  \"surname\": \"zambrano\",\n  \"role\": \"user\"\n}",
+      "raw": "{\n  \"username\": \"admin\",\n  \"name\": \"maria\",\n  \"surname\": \"tejeda\",\n  \"role\": \"admin\"\n}",
       "form": []
     },
     "tests": []
@@ -113,7 +113,7 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-01-28T19:58:19.672Z",
-    "modified": "2023-01-28T19:58:37.645Z",
+    "modified": "2023-01-29T04:37:09.223Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -123,11 +123,11 @@
     "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
     "containerId": "",
     "name": "delete user by id",
-    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "url": "{{API_URL}}/api/users/63d5ad326cedea20f2bca709",
     "method": "DELETE",
     "sortNum": 30000,
     "created": "2023-01-28T22:08:42.819Z",
-    "modified": "2023-01-28T22:51:32.106Z",
+    "modified": "2023-01-29T02:54:09.938Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -137,13 +137,17 @@
     "colId": "d3d7734b-73c0-40fa-83b8-1b88cfbbfdf9",
     "containerId": "",
     "name": "get user by id",
-    "url": "{{API_URL}}/api/users/63d59d4f7f1482a6c2852450",
+    "url": "{{API_URL}}/api/users/63d5f0eb3080db0ee498834c",
     "method": "GET",
     "sortNum": 25000,
     "created": "2023-01-28T22:10:34.585Z",
-    "modified": "2023-01-28T22:10:46.018Z",
+    "modified": "2023-01-29T04:34:42.606Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDVhZDIwNmNlZGVhMjBmMmJjYTcwNSIsInVzZXJuYW1lIjoiRWRpeG9uUGluZWEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY3NDk2NTkyOCwiZXhwIjoxNjc0OTY5NTI4fQ.jTMUzWT46nFdtYKmZ5ApbiOui60HxVX1Br02DHgcVfY"
+    },
     "tests": []
   },
   {
@@ -167,6 +171,25 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Alberto\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "bbd26646-38ee-46d5-ba66-bdfdeaa4f7f5",
+    "colId": "f1c54375-967d-4f48-b344-1d03275c5bec",
+    "containerId": "",
+    "name": "login",
+    "url": "{{API_URL}}/api/auth",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-01-29T02:19:31.183Z",
+    "modified": "2023-01-29T04:18:48.173Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"EdixonPinea\"\n}",
       "form": []
     },
     "tests": []
