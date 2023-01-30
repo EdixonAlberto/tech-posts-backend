@@ -5,7 +5,7 @@
     "default": true,
     "sortNum": 10000,
     "created": "2023-01-28T03:29:56.762Z",
-    "modified": "2023-01-29T16:13:40.152Z",
+    "modified": "2023-01-30T23:12:18.757Z",
     "data": [
       {
         "name": "API_URL",
@@ -13,7 +13,7 @@
       },
       {
         "name": "TOKEN",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDY4OTlkMjU0ZDUxZWNiN2VjMzYzMiIsInVzZXJuYW1lIjoiRWRpeG9uRGV2Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NzUwMDg4MjAsImV4cCI6MTY3NTAxMjQyMH0.Ko6AON9OzWP3Lb5cC4OuwjhDACqg8UIquSbKHOCaFGs"
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDY4OTRhMjU0ZDUxZWNiN2VjMzYyZCIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzUxMjAzMzgsImV4cCI6MTY3NTEyMzkzOH0.9XawIXDuravhrRdSFTA-aukRh-2DjYp3KivMosLiTUM"
       }
     ]
   },

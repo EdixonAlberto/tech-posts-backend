@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common'
+import { Injectable, NotFoundException, UnauthorizedException, BadRequestException } from '@nestjs/common'
 import { InjectModel } from 'nestjs-typegoose'
 import { ReturnModelType } from '@typegoose/typegoose'
 
@@ -23,7 +23,7 @@ export class UsersService {
     }
 
     const userExist = await this.userModel.findOne({ username: user.username })
-    if (userExist) throw new UnauthorizedException('Username is already registered')
+    if (userExist) throw new BadRequestException('Username is already registered')
 
     const createUser = await this.userModel.create({ ...user, role })
     await createUser.save()
