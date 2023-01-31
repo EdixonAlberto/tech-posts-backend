@@ -51,7 +51,7 @@ yarn test:cov
 
 ## Contribuir
 
-Clone el proyecto en el branch `develop` realize sus cambios y cree un `Pull Request` hacia el branch `main`.
+Realice un fork al proyecto en el branch `develop`, introdusca sus cambios y cree un `Pull Request` hacia el branch `main`.
 
 > NOTA: Este proyecto ha sido construido y probado usando el siguiente conjunto de tecnologías:
 

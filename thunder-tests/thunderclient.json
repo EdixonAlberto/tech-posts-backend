@@ -51,12 +51,12 @@
     "method": "POST",
     "sortNum": 5000,
     "created": "2023-01-28T16:54:36.797Z",
-    "modified": "2023-01-29T15:36:46.096Z",
+    "modified": "2023-01-31T07:12:33.644Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"message\": \"yamete\",\n  \"location\": \"arg\"\n}",
+      "raw": "{\n  \"message\": \"yamete\",\n  \"location\": \"colombia\"\n}",
       "form": []
     },
     "auth": {
@@ -92,12 +92,12 @@
     "method": "PATCH",
     "sortNum": 30000,
     "created": "2023-01-28T17:50:43.807Z",
-    "modified": "2023-01-29T16:08:31.759Z",
+    "modified": "2023-01-31T03:00:15.816Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"status\": \"published\"\n}",
+      "raw": "{\n  \"message\": \"lorem\",\n  \"image\": \"\",\n  \"location\": \"\"\n}",
       "form": []
     },
     "auth": {

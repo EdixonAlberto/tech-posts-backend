@@ -44,7 +44,10 @@ export class PostsService {
       ...filters
     ])
 
-    return posts
+    return posts.map(post => ({
+      ...post,
+      author: post.author[0]
+    }))
   }
 
   public async findOne(inputId: string, { id, role }: IUserData) {
@@ -82,7 +85,8 @@ export class PostsService {
   public async update(id: string, postData: UpdatePostDto) {
     const updatePost = await this.postModel.findByIdAndUpdate(id, postData, { new: true })
     if (!updatePost) throw new NotFoundException('Post not found')
-    return updatePost
+    const postPopulate = await updatePost.populate('author')
+    return postPopulate
   }
 
   public async remove(id: string) {
